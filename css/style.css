@@ -547,10 +547,27 @@ text-align: justify;
 
 
 .sub-option {
-    display: flex;
-    justify-content: space-between;
-    /* border-bottom: 1px solid #919798; */
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0 16px;
 }
+
+.sub-option::after {
+  content: "";
+  position: absolute;
+  left: 25px;      /* left gap */
+  right: 20px;     /* right gap */
+  bottom: 0;
+  height: 1px;
+  background: #d1d5db;
+}
+
+.sub-option:last-child::after {
+  display: none;
+}
+
 .sub-option-title{
   display: flex;
   align-items: center;
@@ -637,6 +654,16 @@ color: #B8B8B8;
 .sub-content {
   padding: 15px 27px;
 }
+.sub-content h4{
+  font-family: Inter;
+font-weight: 300;
+font-style: Light;
+font-size: 16.18px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: justify;
+color: #032E15;
+}
 
 .hidden {
   display: none;
@@ -649,28 +676,101 @@ color: #B8B8B8;
 }
 
 .include-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin: 10px 0 20px;
+  display: flex;
+  gap: 16px;
+  margin: 20px 0;
 }
 
-.include-box div {
-  border: 1px solid #ddd;
-  padding: 12px;
-  border-radius: 8px;
-  text-align: center;
+.include-card {
+  flex: 1;
+  border: 1.5px solid #d1d5db;
+  border-radius: 12px;
+  padding: 14px;
+  background: #fff;
+  cursor: pointer;
+  transition: .25s;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
+.include-card.active{
+  width: 50%;
+}
+.include-title {
+  color: #6F7577;
+  font-family: Inter;
+font-weight: 300;
+font-style: Light;
+font-size: 16.18px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: justify;
+
+}
+
+.include-title b {
+  font-family: Inter;
+font-weight: 700;
+font-style: Bold;
+font-size: 16.18px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: justify;
+color: #6F7577;
+}
+
+/* images area */
+.include-images {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.include-images img {
+  max-height: 90px;
+  object-fit: contain;
+}
+
+/* hover */
+.include-card:hover {
+  border-color: #919798;
+}
+
 
 .points {
   list-style: none;
   padding: 0;
+  margin: 16px 0;
 }
 
 .points li {
-  margin-bottom: 6px;
-  font-size: 14px;
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+
+  font-family: Inter;
+font-weight: 300;
+font-style: Light;
+font-size: 14px;
+line-height: 21px;
+letter-spacing: 0.9px;
+text-align: justify;
+text-transform: capitalize;
+color: #032E15;
 }
+
+
+
+.points li i {
+  font-size: 20px;
+  color: #10b981;   
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {

@@ -10,6 +10,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <link rel="stylesheet" href="/css/style.css" />
@@ -147,7 +149,7 @@
               </div>
               <span class="price"><strong>$99.99</strong><span>$146</span></span>
             </label>
-<hr>
+            <!-- <hr> -->
             <div class="sub-content" id="singleSub">
               <h4 class="frag-title">Choose a Fragrance</h4>
 
@@ -188,17 +190,38 @@
 
               <h4>What’s Included:</h4>
               <div class="include-box">
-                <div>Every 30 Days</div>
-                <div>One Time <b>(Free)</b></div>
+
+                <!-- Every 30 Days -->
+                <label class="include-card active">
+                  <input type="radio" name="delivery" checked hidden>
+                  <div class="include-title">Every 30 Days</div>
+                  <div class="include-images single">
+                    <img src="/assets/Original.png" alt="">
+                  </div>
+                </label>
+
+                <!-- One Time Free -->
+                <label class="include-card">
+                  <input type="radio" name="delivery" hidden>
+                  <div class="include-title">One Time <b>(Free)</b></div>
+                  <div class="include-images multiple">
+                    <img src="/assets/Original.png" alt="">
+                    <img src="/assets/Lily.png" alt="">
+                    <img src="/assets/Rose.png" alt="">
+                  </div>
+                </label>
+
               </div>
 
+
               <ul class="points">
-                <li>1 Bottle Shipped Monthly</li>
-                <li>Free Sampler for Original, Lily & Rose</li>
-                <li><b>50% OFF Shipping</b></li>
-                <li>Pause or Cancel Anytime After 3 Months</li>
-                <li>28 Day Money Back Guarantee</li>
-              </ul>
+  <li><i class="fa-regular fa-badge-check"></i> 1 Bottle Shipped Monthly</li>
+  <li><i class="fa-regular fa-badge-check"></i> <strong>Free</strong> Sampler for Original, Lily & Rose Fragrances</li>
+  <li><i class="fa-regular fa-badge-check"></i> <strong>50% OFF Shipping</strong></li>
+  <li><i class="fa-regular fa-badge-check"></i> Pause or Cancel Anytime After 3 Months Minimum</li>
+  <li><i class="fa-regular fa-badge-check"></i> 28 Day Money Back Guarantee*</li>
+</ul>
+
             </div>
           </div>
           <!-- Double -->

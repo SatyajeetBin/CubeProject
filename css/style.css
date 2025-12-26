@@ -789,6 +789,165 @@ color: #FFFFFF;
 }
 
 
+
+
+/* Collection Section */
+
+.collection-section {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.collection-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.collection-left h2 {
+color: #032E15;
+  margin-bottom: 30px;
+
+  font-family: Inter;
+font-weight: 600;
+font-style: Semi Bold;
+font-size: 36px;
+line-height: 100%;
+letter-spacing: 0px;
+
+}
+
+/* FAQ */
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  border: 1px solid #e5e7eb;
+
+justify-content: space-between;
+opacity: 1;
+padding-top: 24px;
+padding-right: 32px;
+padding-bottom: 24px;
+padding-left: 32px;
+
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #064e3b;
+}
+.faq-question span{
+  font-family: Inter;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 30px;
+letter-spacing: 0px;
+color: #032E15;
+}
+.faq-question .icon {
+  font-size: 20px;
+  color: #032E15;
+}
+
+.faq-answer {
+font-family: Inter;
+font-weight: 300;
+font-style: Light;
+font-size: 16px;
+line-height: 20.23px;
+letter-spacing: 0px;
+margin-top: 20px;
+display: none;
+  color: #666666;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .icon {
+  content: "−";
+}
+
+/* Right image */
+.collection-right img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+
+.stats-section {
+  background: linear-gradient(180deg, #032E15 0%, #016630 100%);
+  padding: 60px 20px;
+}
+
+.stats-container {
+     max-width: 1200px;
+    margin: auto;
+    /* display: grid; */
+    /* grid-template-columns: repeat(4, 1fr); */
+    gap: 30px;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+
+.stat-item h3 {
+
+  color: #FFFFFF;
+  margin-bottom: 10px;
+
+  font-family: Inter;
+font-weight: 700;
+font-style: Bold;
+font-size: 40px;
+line-height: 100%;
+letter-spacing: 0px;
+text-align: center;
+
+}
+
+.stat-item p {
+  color: #FFFFFF;
+  margin: auto;
+  font-family: Inter;
+font-weight: 300;
+font-style: Light;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0px;
+text-align: center;
+
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
   .nav {

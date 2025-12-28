@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Selected Subscription</h2>
+  <div id="result"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    let html = "";
+
+    params.forEach((v, k) => {
+      html += `<p><b>${k}</b>: ${v}</p>`;
+    });
+
+    document.getElementById("result").innerHTML = html;
+  </script>
+</body>
+</html>

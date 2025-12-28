@@ -68,22 +68,30 @@ thumbs.forEach((img) => {
   };
 });
 
-
 const subRadios = document.querySelectorAll("input[name='subType']");
 const singleSub = document.getElementById("singleSub");
 const doubleSub = document.getElementById("doubleSub");
 
+function updateSubscriptionView() {
+  const selected = document.querySelector("input[name='subType']:checked").value;
+
+  if (selected === "single") {
+    singleSub.classList.remove("hidden");
+    doubleSub.classList.add("hidden");
+  } else {
+    singleSub.classList.add("hidden");
+    doubleSub.classList.remove("hidden");
+  }
+}
+
+// on change
 subRadios.forEach(r => {
-  r.addEventListener("change", () => {
-    if (r.value === "single") {
-      singleSub.classList.remove("hidden");
-      doubleSub.classList.add("hidden");
-    } else {
-      singleSub.classList.add("hidden");
-      doubleSub.classList.remove("hidden");
-    }
-  });
+  r.addEventListener("change", updateSubscriptionView);
 });
+
+// ✅ run once on load
+document.addEventListener("DOMContentLoaded", updateSubscriptionView);
+
 
 
 // Collection Section
